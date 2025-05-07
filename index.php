@@ -158,7 +158,7 @@ if($authenticated){
 
     <div class="login-container">
         <h2>Grand Stay Hotel Login</h2>
-        <form method="post" id="loginF">
+        <form method="post" id="loginForm">
                         <label for="fname">First Name:</label>
                         <input type="text" id="fname" name="fname" value="<?= $first_name; ?>" required>
                         <span class="text-danger"><?= $fname_err; ?></span>
