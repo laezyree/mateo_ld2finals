@@ -108,6 +108,7 @@
         <a href="#book-now" data-target="book-now">Book Now</a>
         <a href="#location" data-target="location">Location</a>
         <a href="#about-us" data-target="about-us">About Us</a>
+        <a href="./logout.php"><button class="logout-button" >Log Out</button></a>
     </nav>
     <div class="welcome-text">
         <h1><b>Welcome to Grand Stay Hotel</b></h1>
