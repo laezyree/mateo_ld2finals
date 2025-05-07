@@ -117,27 +117,27 @@
     <h1 class="best-seller">Our Best Rooms</h1>
     <section class="room-gallery">
         <div class="room-item">
-            <img src="C:\mateo,2E\deluxe-room-king-1-2000px.jpg" alt="Deluxe Room">
+            <img src="./images/deluxe-room-king-1-2000px.jpg" alt="Deluxe Room">
             <h3>Deluxe Room</h3>
         </div>
         <div class="room-item">
-            <img src="C:\mateo,2E\Hotel-suite-living-room.jpg" alt="Suite Room">
+            <img src="./images/Hotel-suite-living-room.jpg" alt="Suite Room">
             <h3>Suite Room</h3>
         </div>
         <div class="room-item">
-            <img src="C:\mateo,2E\Amorgos-Standard-Room2-e1464286437370.jpg" alt="Standard Room">
+            <img src="./images/Amorgos-Standard-Room2-e1464286437370.jpg" alt="Standard Room">
             <h3>Standard Room</h3>
         </div>
         <div class="room-item">
-            <img src="C:\mateo,2E\Penthouse-Suite-Bedroom_2.jpg" alt="Penthouse">
+            <img src="./images/Penthouse-Suite-Bedroom_2.jpg" alt="Penthouse">
             <h3>Penthouse</h3>
         </div>
         <div class="room-item">
-            <img src="C:\mateo,2E\A3_5-1-1024x680 (1).jpg" alt="Villa">
+            <img src="./images/A3_5-1-1024x680 (1).jpg" alt="Villa">
             <h3>Villa</h3>
         </div>
         <div class="room-item">
-            <img src="C:\mateo,2E\Family-Suite1-850x450.jpg" alt="Family Suite">
+            <img src="./images/Family-Suite1-850x450.jpg" alt="Family Suite">
             <h3>Family Suite</h3>
         </div>
     </section>
