@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEESHOP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #998888;
+            color: #333;
+        }
+        header, footer {
+            background-color: #52392c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #946f53;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #c9a68b;
+            text-decoration: underline;
+        }
+        .coffee-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 40px;
+        }
+        .coffee-item {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin-top: 20px;
+        }
+        .coffee-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .coffee-item h3 {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+        section {
+            margin-top: 40px;
+        }
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CAFENA COFFEE SHOP</h1>
+    </header>
+    <nav>
+        <a href="#home "data-target="home">Home</a>
+        <a href="#menu" data-target="menu">Menu</a>
+        <a href="#location" data-target="location">Location</a>
+        <a href="#about-us" data-target="about-us">About Us</a>
+    </nav>
+    <center><h1><b>Welcome to CAFENA COFFEE SHOP</b></h1></center>

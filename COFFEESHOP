@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #333;
+        }
+        header, footer {
+            background-color: #4e3629;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #6f4f37;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #c9a68b;
+            text-decoration: underline;
+        }
+        .coffee-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 40px;
+        }
+        .coffee-item {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin-top: 20px;
+        }
+        .coffee-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .coffee-item h3 {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+        section {
+            margin-top: 40px;
+        }
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LCoffee Shop</h1>
+    </header>
+    <nav>
+        <a href="#menu" data-target="menu">Menu</a>
+        <a href="#order-online" data-target="order-online">Order Online</a>
+        <a href="#location" data-target="location">Location</a>
+        <a href="#about-us" data-target="about-us">About Us</a>
+    </nav>
+    <center><h1><b>Welcome to LCoffee Shope</b></h1></center>
+  <center>  <h2>Happiness is a cup off coffee and good company</h2></center>
+      <h1 style="font: italic;">BEST SELLER</h1>
+    <section class="coffee-gallery">
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\espresso.webp" alt="Espresso">
+            <h3>Espresso</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\cafe-latte1-recipe.jpg" alt="Latte">
+            <h3>Latte</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\Cappuccino-exc.webp" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\americano_b74a8154-454b-4f74-9a6c-95fbc4152ed3_800x.webp" alt="Americano">
+            <h3>Americano</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\85153452-56a176765f9b58b7d0bf84dd.jpg" alt="Macchiato">
+            <h3>Macchiato</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\mocha.webp" alt="Mocha">
+            <h3>Mocha</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\Flat_white_sitting_on_a_table.webp" alt="Flat White">
+            <h3>Flat White</h3>
+        </div>
+        <div class="coffee-item">
+            <img src="D:\LUCAS BSIT 2-B WEB 2\images.jpg" alt="Irish Coffee">
+            <h3>Irish Coffee</h3>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Coffee Shop. Reserved Now.</p>
+    </footer>
+</body>
+</html>
+                                                                                                                                                                                 

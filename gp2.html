@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Generator</title>
+</head>
+<body>
+
+    <div>
+        Text: <input type="text" id="text" /><br />
+        Times: <input type="text" id="times" /><br />
+        <input type="button" value="Generate Sentences" onclick="generate();" />
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function generate() {
+            var sentence = document.getElementById("text").value;
+            var times = parseInt(document.getElementById("times").value);
+            var text = "";
+
+            if (isNaN(times) || times <= 0) {
+                document.getElementById("output").innerHTML = "Please enter a valid number of times.";
+                return;
+            }
+
+            for (var i = 0; i < times; i++) {
+                text += sentence + "<br />";
+            }
+
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>
