@@ -2,11 +2,6 @@
 
 session_start();
 
-$authenticated = false;
-if(isset($_SESSION["email"])){
-    $authenticated = true;
-}
-
 $first_name = "";
 $last_name = "";
 $email = "";
@@ -78,11 +73,11 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
         $created_at = date('Y-m-d H:i:s');
 
         $statement = $dbConnection->prepare(
-            "INSERT INTO users (first_name, last_name, email, phone, address, password, created_at) ".
-            "VALUES (?,?,?,?,?,?,?)"
+            "INSERT INTO users (first_name, last_name, email, password, createdAt) ".
+            "VALUES (?,?,?,?,?)"
         );
 
-    $statement->bind_param('sssisss', $first_name,$last_name,$email,$phone,$address,$password,$created_at);
+    $statement->bind_param('sssss', $first_name,$last_name,$email,$password,$created_at);
 
     $statement->execute();
 
@@ -97,14 +92,10 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION["email"] = $email;
     $_SESSION["created_at"] = $created_at;
 
-    header("Location: home.php");
+    header("Location: login.php");
     exit();
     }
 }
-if($authenticated){
-    header("Location: home.php");
-    exit();
-} else {
 ?>
 <html lang="en">
 <head>
@@ -187,6 +178,3 @@ if($authenticated){
     </div>
 </body>
 </html>
-<?php
-}
-?>
