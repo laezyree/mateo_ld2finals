@@ -2,11 +2,6 @@
 
 session_start();
 
-if(isset($_SESSION["email"])){
-    header("location: ./home.php");
-    exit;
-}
-
 
 $email = "";
 $error = "";
@@ -22,40 +17,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $dbConnection = getDBConnection();
      
         $statement = $dbConnection->prepare(
-            "SELECT id, first_name, last_name, phone, password, created_at FROM users WHERE email = ?"
+            "SELECT id, first_name, last_name, password, createdAt FROM users WHERE email = ?"
         );
 
         $statement->bind_param('s',$email);
         $statement->execute();
 
-
-        $statement->bind_result($id, $first_name, $last_name, $phone, $stored_password, $created_at);
-
-
-
-
-        $entered = 'TestPass444';
-        $hash = '$2y$10$YHlni1Ev/XuE0H6TVCWiq.bL/nn1l7brL5sxCP2HYZZE3Re61FJ12';
+        $statement->bind_result($id, $first_name, $last_name, $stored_password, $createdAt);
         
-
         if($statement->fetch()){
-
             if(password_verify($password,$stored_password)){
                 $_SESSION["id"] = $id;
                 $_SESSION["first_name"] = $first_name;
                 $_SESSION["last_name"] = $last_name;
                 $_SESSION["email"] = $email;
-                $_SESSION["phone"] = $phone;
-                $_SESSION["created_at"] = $created_at;
+                $_SESSION["createdAt"] = $createdAt;
                 
-                header("location: ./home.php");
+                header("location: ./menu.php");
                 exit;
+            } else {
+                $error = "Email or Password Invalid";
             }
+        } else {
+            $error = "Email or Password Invalid";
         }
-
+        
         $statement->close();
-
-        $error = "Email or Password Invalid";
     }
 }
 
