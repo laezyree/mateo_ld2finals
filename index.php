@@ -73,11 +73,11 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
         $created_at = date('Y-m-d H:i:s');
 
         $statement = $dbConnection->prepare(
-            "INSERT INTO users (first_name, last_name, email, password, createdAt) ".
+            "INSERT INTO users (first_name, last_name, email, password, created_at) ".
             "VALUES (?,?,?,?,?)"
         );
 
-    $statement->bind_param('sssss', $first_name,$last_name,$email,$password,$createdAt);
+    $statement->bind_param('sssss', $first_name,$last_name,$email,$password,$created_at);
 
     $statement->execute();
 
@@ -90,7 +90,7 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION["first_name"] = $first_name;
     $_SESSION["last_name"] = $last_name;
     $_SESSION["email"] = $email;
-    $_SESSION["created_at"] = $createdAt;
+    $_SESSION["created_at"] = $created_at;
 
     header("Location: login.php");
     exit();
