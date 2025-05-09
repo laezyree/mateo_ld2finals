@@ -17,13 +17,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $dbConnection = getDBConnection();
      
         $statement = $dbConnection->prepare(
-            "SELECT id, first_name, last_name, password, createdAt FROM users WHERE email = ?"
+            "SELECT id, first_name, last_name, password, created_at FROM users WHERE email = ?"
         );
 
         $statement->bind_param('s',$email);
         $statement->execute();
 
-        $statement->bind_result($id, $first_name, $last_name, $stored_password, $createdAt);
+        $statement->bind_result($id, $first_name, $last_name, $stored_password, $created_at);
         
         if($statement->fetch()){
             if(password_verify($password,$stored_password)){
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $_SESSION["first_name"] = $first_name;
                 $_SESSION["last_name"] = $last_name;
                 $_SESSION["email"] = $email;
-                $_SESSION["createdAt"] = $createdAt;
+                $_SESSION["createdAt"] = $created_at;
                 
                 header("location: ./menu.php");
                 exit;
