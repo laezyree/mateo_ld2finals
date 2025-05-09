@@ -77,7 +77,7 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
             "VALUES (?,?,?,?,?)"
         );
 
-    $statement->bind_param('sssss', $first_name,$last_name,$email,$password,$created_at);
+    $statement->bind_param('sssss', $first_name,$last_name,$email,$password,$createdAt);
 
     $statement->execute();
 
@@ -90,7 +90,7 @@ IF($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION["first_name"] = $first_name;
     $_SESSION["last_name"] = $last_name;
     $_SESSION["email"] = $email;
-    $_SESSION["created_at"] = $created_at;
+    $_SESSION["created_at"] = $createdAt;
 
     header("Location: login.php");
     exit();
